@@ -1,40 +1,42 @@
+[На русском](README_ru.md)
+
 # ImgToASCII
-Программа для превращения изображения в ASCII. 
+Program for converting images to ASCII.
 
-Это проект, вдохновлённый видео [I Tried Turning Games Into Text](https://www.youtube.com/watch?v=gg40RWiaHRY).
+This project is inspired by the video [I Tried Turning Games Into Text](https://www.youtube.com/watch?v=gg40RWiaHRY).
 
-## Цель
-Изучить алгоритмы для обработки графики.
+## Goal
+To study algorithms for graphics processing.
 
-## Как работает
-К изображению применяется ряд фильтров а затем результат выводится в .html файл с возможностью сохранить цвета. Фильтры нужны чтобы сохранить границы объектов и вывести их символами `_ / \ |` в ASCII.
+## How it works
+A series of filters are applied to the image, and then the result is output to an HTML file with the option to save colors. The filters are needed to preserve the boundaries of objects and output them as `_ / \ |` characters in ASCII.
 
-Так как целью является изучение алгоритмов, то упор сделан не на производительность, поэтому изображение обрабатывается на CPU.
+Since the goal is to study algorithms, the focus is not on performance, so the image is processed on the CPU.
 
-## Фильтры
-### Оригинал
-![Оригинал](./examples/raimei.png)
-### Изображение в ASCII
-![Изображение в ASCII](./examples/ascii.png)
-### Изображение в ASCII в цвете
-![Изображение в ASCII](./examples/ascii-colour.png)
-### Размытие по гауссу
-![Размытие по гауссу](./examples/gauss.jpg)
-### Разность размытий
-![Разность размытий](./examples/DoG.jpg)
-### Оператор собеля
-Цветом показан угол границы
-![Оператор собеля](./examples/sobel-colour.jpg)
-### Оператор собеля + разность размытий
-Цветом показан угол границы
-![Оператор собеля + разность размытий](./examples/sobel-dog-colour.jpg)
+## Filters
+### Original
+![Original](./examples/raimei.png)
+### Image in ASCII
+![Image in ASCII](./examples/ascii.png)
+### Image in ASCII with color
+![Image in ASCII](./examples/ascii-colour.png)
+### Gaussian blur
+![Gaussian blur](./examples/gauss.jpg)
+### Difference of Gaussians
+![Difference of Gaussians](./examples/DoG.jpg)
+### Sobel operator
+Boundary angle is shown in color
+![Sobel operator](./examples/sobel-colour.jpg)
+### Sobel operator + Difference of Gaussians
+Boundary angle is shown in color
+![Sobel operator + Difference of Gaussians](./examples/sobel-dog-colour.jpg)
 
-## Как скомпилировать 
-1. Установите [Go](https://go.dev)
-2. Скопируйте исходный код
-3. Скомпилируйте командой `go build . -o <имя_файла>`
+## How to compile
+1. Install [Go](https://go.dev)
+2. Copy the source code
+3. Compile with the command `go build . -o <output_file>`
 
-## Как пользоваться
-`./<скомпилированный_файл> <файл_с_изображением> true/false`
+## How to use
+`./<compiled_file> <image_file> true/false`
 
-true/false - получить ASCII в цвете или нет 
+true/false - get ASCII in color or not
